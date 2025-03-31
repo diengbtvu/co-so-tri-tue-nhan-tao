@@ -12,7 +12,7 @@ namespace BFS
 
        public void run()
         {
-            G.readFile(@"D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\input.txt");
+            G.readDothi(@"D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\input.txt");
             Console.WriteLine("Graph:");
             G.printMatrix();
             List<int> ans =  G.BFS();

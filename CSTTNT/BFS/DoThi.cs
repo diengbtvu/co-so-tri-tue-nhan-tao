@@ -17,6 +17,35 @@ namespace BFS
         public DoThi()
         { 
         }
+        public void readDothi(String path)  //Đọc file từ ổ đĩa
+        {
+            string textFile = path; //Thay đổi đường dẫn phù hợp với ứng dụng của bạn
+            if (File.Exists(textFile))
+            {
+                // Đọc tập tin dữ liệu theo từng dòng
+                // Mỗi dòng lưu vào mảng lines[]
+                string[] lines = File.ReadAllLines(textFile);
+                string line0 = lines[0].Trim(); // Dòng thứ nhất cho biết số đỉnh
+                this.n = Convert.ToInt16(line0); // Chuyển kiểu dữ liệu. Sử dụng Parse nếu bạn không thích sử dụng Convert
+
+                string line1 = lines[1].Trim();
+                string[] tam = line1.Split(' ');
+                this.start = Convert.ToInt16(tam[0]); // Dòng thứ 2 cho biết đỉnh Start và Goal
+                this.goal = Convert.ToInt16(tam[1]);
+
+                for (int i = 0; i < this.n; i++)
+                { // Dòng thứ 3 trở về sau cho biết ma trận kề
+                    string linei = lines[i + 2].Trim();
+                    string[] arr1 = linei.Split(' ');
+                    for (int j = 0; j < this.n; j++)
+                    {
+                        this.arr[i, j] = Convert.ToInt32(arr1[j]);
+                        //Console.Write(matran[i,j] + " ");
+                    }
+                    //Console.WriteLine();
+                }
+            }
+        }
 
 
         public void readFile(String path)

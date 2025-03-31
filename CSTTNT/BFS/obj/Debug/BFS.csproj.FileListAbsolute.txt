@@ -1,2 +1,7 @@
 c:\users\hoc vien\documents\visual studio 2015\Projects\CSTTNT\BFS\bin\Debug\BFS.exe.config
 D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\bin\Debug\BFS.exe.config
+D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\bin\Debug\BFS.exe
+D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\bin\Debug\BFS.pdb
+D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\obj\Debug\BFS.csprojResolveAssemblyReference.cache
+D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\obj\Debug\BFS.exe
+D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\obj\Debug\BFS.pdb

@@ -10,6 +10,10 @@ namespace BFS
     {
         static void Main(string[] args)
         {
+            BFS b = new BFS();
+            b.init();
+           Console.ReadKey();
+
         }
     }
 }

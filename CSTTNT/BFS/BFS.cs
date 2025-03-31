@@ -13,11 +13,17 @@ namespace BFS
        public void init()
         {
             G.readFile(@"D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\input.txt");
+            Console.WriteLine("Graph:");
             G.printMatrix();
-        }
-        public void bfs()
-        {
-            
+            List<int> ans =  G.BFS_MinimumFee();
+            if (ans != null)
+            {
+                Console.WriteLine("Path with minimum fee: " + string.Join(" -> ", ans));
+            }
+            else
+            {
+                Console.WriteLine("No path found.");
+            }
         }
       
     }

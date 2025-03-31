@@ -65,6 +65,54 @@ namespace BFS
             }
         }
 
+        public List<int> BFS_MinimumFee()
+        {
+            Queue<int> queue = new Queue<int>();
+            Dictionary<int, int> previous = new Dictionary<int, int>();
+            List<int> solution = new List<int>();
+            List<int> V_current = new List<int> { start };
+
+            previous[start] = -1;
+            int k = 0;
+
+            while (!V_current.Contains(goal) && V_current.Count > 0)
+            {
+                List<int> V_next = new List<int>();
+
+                foreach (int s in V_current)
+                {
+                    for (int sPrime = 0; sPrime < n; sPrime++)
+                    {
+                        if (arr[s, sPrime] != 0 && !previous.ContainsKey(sPrime))
+                        {
+                            previous[sPrime] = s;
+                            V_next.Add(sPrime);
+                        }
+                    }
+                }
+
+                V_current = V_next;
+                k++;
+            }
+
+            if (V_current.Count == 0)
+            {
+                Console.WriteLine("FAILURE");
+                return null;
+            }
+            else
+            {
+                int state = goal;
+                while (state != -1)
+                {
+                    solution.Insert(0, state);
+                    state = previous[state];
+                }
+            }
+
+            return solution;
+        }
+
 
 
     }

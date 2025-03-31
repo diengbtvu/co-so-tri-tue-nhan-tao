@@ -11,9 +11,9 @@ namespace BFS
         static void Main(string[] args)
         {
             BFS b = new BFS();
-            b.init();
-           Console.ReadKey();
-
+            b.run();
+            Console.WriteLine("Press any key to close program!");
+            Console.ReadKey();
         }
     }
 }

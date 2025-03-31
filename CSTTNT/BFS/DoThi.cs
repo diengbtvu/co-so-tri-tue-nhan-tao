@@ -15,9 +15,7 @@ namespace BFS
         public int[,] arr;
 
         public DoThi()
-        {
-//            this.readFile(@"D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\input.txt");
-      
+        { 
         }
 
 
@@ -64,14 +62,16 @@ namespace BFS
                 Console.WriteLine();
             }
         }
-
-        public List<int> BFS_MinimumFee()
+        // This function return a list of path with minumun fee 
+        public List<int> BFS()
         {
             Queue<int> queue = new Queue<int>();
             Dictionary<int, int> previous = new Dictionary<int, int>();
+            // path will return 
             List<int> solution = new List<int>();
             List<int> V_current = new List<int> { start };
 
+            // init pre of start is NIL = -1
             previous[start] = -1;
             int k = 0;
 
@@ -112,8 +112,5 @@ namespace BFS
 
             return solution;
         }
-
-
-
     }
 }

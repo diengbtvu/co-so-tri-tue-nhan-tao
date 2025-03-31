@@ -10,12 +10,12 @@ namespace BFS
     {
         DoThi G = new DoThi();
 
-       public void init()
+       public void run()
         {
             G.readFile(@"D:\co-so-tri-tue-nhan-tao\CSTTNT\BFS\input.txt");
             Console.WriteLine("Graph:");
             G.printMatrix();
-            List<int> ans =  G.BFS_MinimumFee();
+            List<int> ans =  G.BFS();
             if (ans != null)
             {
                 Console.WriteLine("Path with minimum fee: " + string.Join(" -> ", ans));

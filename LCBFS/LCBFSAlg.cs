@@ -9,7 +9,7 @@ namespace LCBFS
     class LCBFSAlg
     {
         private Dothi dt;
-        private Queue q; // Dùng Queue có sẵn trong .NET 4.5
+        private Queue q; // Dùng Queue 
         private int[] pre; // Lưu trữ đỉnh trước đỉnh i trong quá trình tìm kiếm
         private int[] g;   // Lưu chi phí đến đỉnh i từ đỉnh bắt đầu
         static readonly int NIL = -5;
@@ -23,8 +23,8 @@ namespace LCBFS
 
             for (int i = 0; i < dt.Sodinh; i++)
             {
-                pre[i] = -2;
-                g[i] = 0;
+                pre[i] = -2; // Chưa được thăm
+                g[i] = 0; // Khởi tạo chi phí ban đầu là o
             }
 
             pre[dt.Start] = NIL;
@@ -34,49 +34,76 @@ namespace LCBFS
 
         public bool LCBFSsearch()
         {
-            bool kq = false;
+            bool goal = false;
+            int k = 0;
 
             while (q.Count > 0)
             {
-                int u = (int)q.Dequeue();
-
-                for (int v = 0; v < dt.Sodinh; v++)
+                // Xử lý tất cả các trạng thái ở mức k hiện tại
+                int v_size = q.Count;      
+                for (int i = 0; i < v_size; i++)
                 {
-                    if (dt.Matran[u, v] > 0 && pre[v] == -2)
+                    int s = (int)q.Dequeue();            
+                    // Duyệt tất cả các trạng thái kề 
+                    for (int s1 = 0; s1 < dt.Sodinh; s1++)
                     {
-                        pre[v] = u;
-                        g[v] = g[u] + dt.Matran[u, v];
-                        q.Enqueue(v);
-
-                        if (v == dt.Goal)
+                        // Kiểm tra xem có đường đi từ s đến s1 không
+                        if (dt.Matran[s, s1] > 0)
                         {
-                            kq = true;
-                            return true;
+                            // Chi phí
+                            int cp = g[s] + dt.Matran[s, s1];
+                            // Nếu s1 chưa được gán nhãn HAY nếu g(s) + Cost(s,s1) < g(s1)
+                            if (pre[s1] == -2 || cp < g[s1])
+                            {
+                                // Đặt previous(s1) := s
+                                pre[s1] = s;
+                                // Đặt g(s1) := g(s) + Cost(s,s1)
+                                g[s1] = cp;
+                                // Thêm s1 vào Vk+1 nếu chưa nằm trong queue
+                                bool trongHangDoi = false;
+                                foreach (int it in q)
+                                {
+                                    if (it == s1)
+                                    {
+                                        trongHangDoi = true;
+                                        break;
+                                    }
+                                }                         
+                                if (!trongHangDoi)
+                                {
+                                    q.Enqueue(s1);
+                                }
+                                // Kiểm tra nếu tìm thấy đích
+                                if (s1 == dt.Goal)
+                                {
+                                    goal = true;
+                                    // Không return ngay để tìm được đường đi tối ưu
+                                }
+                            }
                         }
                     }
                 }
+                k++; // Tăng k
             }
-
-            return kq;
+            return goal;
         }
 
         public void printDuongDi()
         {
             Stack stack = new Stack();
             int v = dt.Goal;
-
             while (v != NIL)
             {
                 stack.Push(v);
                 v = pre[v];
             }
-
-            Console.Write("Duong di: ");
-            while (stack.Count > 0)
+            Console.Write("\nDuong di: ");
+            while (stack.Count > 1)
             {
-                Console.Write(stack.Pop() + " ");
+                Console.Write(stack.Pop() + " -> ");
             }
-            Console.WriteLine();
+            Console.Write(stack.Pop());
+           Console.WriteLine();
         }
 
         public void printG()

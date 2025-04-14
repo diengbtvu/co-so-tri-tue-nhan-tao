@@ -4,3 +4,6 @@ c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-t
 c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\BFS\obj\Debug\BFS.csprojResolveAssemblyReference.cache
 c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\BFS\obj\Debug\BFS.exe
 c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\BFS\obj\Debug\BFS.pdb
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\BFS\bin\Debug\BFS.exe.config
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\BFS\obj\Debug\BFS.exe
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\BFS\obj\Debug\BFS.pdb

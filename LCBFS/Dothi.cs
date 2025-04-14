@@ -48,7 +48,7 @@ namespace LCBFS
 
         public void readDothi() // Đọc file từ ổ đĩa
         {
-            string textFile = @"c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\LCBFS\LCBFSinput.txt"; // Thay đổi đường dẫn phù hợp với ứng dụng của bạn
+            string textFile = @"C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\LCBFSinput.txt"; // Thay đổi đường dẫn phù hợp với ứng dụng của bạn
             if (File.Exists(textFile))
             {
                 // Đọc tập tin dữ liệu theo từng dòng
@@ -69,7 +69,7 @@ namespace LCBFS
                     string[] arr = linei.Split(' ');
                     for (int j = 0; j < this.Sodinh; j++)
                     {
-                        Console.WriteLine(arr[j]);
+                     //   Console.WriteLine(arr[j]);
                         this.Matran[i, j] = Convert.ToInt32(arr[j]);
                         // Console.Write(matran[i, j] + " ");
                     }
@@ -85,8 +85,9 @@ namespace LCBFS
             {
                 Console.WriteLine();
                 for (int j = 0; j < this.Sodinh; j++)
-                    Console.Write(this.Matran[i, j] + " ");
+                    Console.Write($"{this.Matran[i, j],2} "); 
             }
+            Console.WriteLine("\n");
         }
 
 

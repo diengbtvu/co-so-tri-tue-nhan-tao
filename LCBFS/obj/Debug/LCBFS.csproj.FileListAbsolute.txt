@@ -4,3 +4,9 @@ c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-t
 c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\LCBFS\obj\Debug\LCBFS.csprojResolveAssemblyReference.cache
 c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\LCBFS\obj\Debug\LCBFS.exe
 c:\users\nguyen hoang\documents\visual studio 2013\Projects\co-so-tri-tue-nhan-tao\LCBFS\obj\Debug\LCBFS.pdb
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\bin\Debug\LCBFS.exe.config
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\obj\Debug\LCBFS.exe
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\obj\Debug\LCBFS.pdb
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\bin\Debug\LCBFS.exe
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\bin\Debug\LCBFS.pdb
+C:\Users\Hoc vien\Desktop\co-so-tri-tue-nhan-tao\LCBFS\obj\Debug\LCBFS.csprojResolveAssemblyReference.cache

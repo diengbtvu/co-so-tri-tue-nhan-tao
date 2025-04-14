@@ -9,7 +9,7 @@ namespace LCBFS
     class Program
     {
         static void Main(string[] args)
-        {
+       {
             // 1. Test đọc dữ liệu từ file
             Dothi dt = new Dothi();
             dt.printDothi();
@@ -18,7 +18,6 @@ namespace LCBFS
 
              LCBFSAlg alg = new LCBFSAlg();
              alg.LCBFSsearch();
-             System.Console.WriteLine("In duong di: ");
              alg.printDuongDi();
              alg.printG();
             System.Console.ReadLine();
